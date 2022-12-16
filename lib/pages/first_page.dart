@@ -208,6 +208,13 @@ class _FirstPageState extends State<FirstPage> {
         backgroundColor: Colors.pink,
       ));
     } else if (isValid) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text(
+          "Your Login Is Success",
+          style: TextStyle(color: Colors.white, fontSize: 20),
+        ),
+        backgroundColor: Colors.pink,
+      ));
       return Navigator.push(
           context, MaterialPageRoute(builder: (context) => const ProPage()));
     }
